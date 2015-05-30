@@ -7,39 +7,33 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 
+import butterknife.ButterKnife;
+import ch.swissonid.design_lib_sample.adapters.RVArrayAdapter;
+import ch.swissonid.design_lib_sample.fragments.StandardAppBarFragment;
+import ch.swissonid.design_lib_sample.util.Navigator;
+
 public class MainActivity extends AppCompatActivity {
 
-    private static final int AMOUNT_OF_DATA = 50;
 
+
+    private static Navigator mNavigator;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        setToolbar();
-        setList();
+        ButterKnife.inject(this);
+        initNavigator();
+        mNavigator.goTo(StandardAppBarFragment.newInstance());
     }
 
-    private void setList() {
-        RecyclerView recyclerView = (RecyclerView) findViewById(R.id.simpleList);
-
-        RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(this);
-        recyclerView.setLayoutManager(layoutManager);
-
-        RVArrayAdapter arrayAdapter = new RVArrayAdapter(getData());
-        recyclerView.setAdapter(arrayAdapter);
+    private void initNavigator() {
+        mNavigator = new Navigator(getSupportFragmentManager());
     }
 
-    @NonNull
-    private String[] getData() {
-        String[] data = new String[AMOUNT_OF_DATA];
-        for(int i=0;i<AMOUNT_OF_DATA;++i){
-            data[i]=(getString(R.string.sample_data,(i+1)));
-        }
-        return data;
-    }
 
     private void setToolbar() {
-        Toolbar mToolbar = (Toolbar) findViewById(R.id.toolbar);
+        Toolbar mToolbar = ButterKnife.findById(this, R.id.toolbar);
+        if(mToolbar == null) return;
         setSupportActionBar(mToolbar);
     }
 

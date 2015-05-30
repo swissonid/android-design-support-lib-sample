@@ -1,4 +1,4 @@
-package ch.swissonid.design_lib_sample;
+package ch.swissonid.design_lib_sample.adapters;
 
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;

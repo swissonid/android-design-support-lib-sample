@@ -1,4 +1,9 @@
 <resources>
     <string name="app_name">Design Support Lib Sample</string>
     <string name="sample_data">"Some data %1$d"</string>
+    <string name="standard_app_bar_menu_title">Standart app bar</string>
+    <string name="tabs_menu_title">Tabs</string>
+
+<!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
