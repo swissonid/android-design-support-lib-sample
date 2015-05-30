@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Design Support Lib Sample</string>
+    <string name="sample_data">"Some data %1$d"</string>
+</resources>
