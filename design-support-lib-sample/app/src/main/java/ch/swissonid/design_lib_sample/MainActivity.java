@@ -1,12 +1,16 @@
 package ch.swissonid.design_lib_sample;
 
-import android.graphics.Color;
 import android.os.Bundle;
+import android.support.annotation.IdRes;
+import android.support.annotation.MenuRes;
+import android.support.design.widget.NavigationView;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.view.MenuItem;
 import android.view.View;
+import android.widget.Toast;
 
 import butterknife.ButterKnife;
 import butterknife.InjectView;
@@ -14,14 +18,21 @@ import ch.swissonid.design_lib_sample.fragments.StandardAppBarFragment;
 import ch.swissonid.design_lib_sample.util.LogUtils;
 import ch.swissonid.design_lib_sample.util.Navigator;
 
-public class MainActivity extends AppCompatActivity implements DrawerLayout.DrawerListener{
+import static ch.swissonid.design_lib_sample.util.LogUtils.LOGD;
+
+public class MainActivity extends AppCompatActivity implements DrawerLayout.DrawerListener
+        , NavigationView.OnNavigationItemSelectedListener{
 
     @InjectView(R.id.drawer_layout)
     DrawerLayout mDrawerLayout;
 
+    @InjectView(R.id.navigation_view)
+    NavigationView mNavigationView;
+
     private static Navigator mNavigator;
     private Toolbar mToolbar;
     private ActionBarDrawerToggle mDrawerToggle;
+    private @IdRes int mCurrentMenuItem;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,7 +42,8 @@ public class MainActivity extends AppCompatActivity implements DrawerLayout.Draw
         setupToolbar();
         setupNavDrawer();
         initNavigator();
-        mNavigator.goTo(StandardAppBarFragment.newInstance());
+        mCurrentMenuItem = R.id.standard_app_bar_menu_item;
+        mNavigator.setStartFragment(StandardAppBarFragment.newInstance());
     }
 
     private void initNavigator() {
@@ -40,9 +52,14 @@ public class MainActivity extends AppCompatActivity implements DrawerLayout.Draw
 
     private void setupToolbar() {
         mToolbar = ButterKnife.findById(this, R.id.toolbar);
-        if(mToolbar == null) return;
+        if(mToolbar == null) {
+            LOGD(this, "Didn't find a toolbar");
+            return;
+        }
         setSupportActionBar(mToolbar);
+        if(getSupportActionBar() == null) return;
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setHomeButtonEnabled(true);
     }
 
     private void setupNavDrawer() {
@@ -59,7 +76,15 @@ public class MainActivity extends AppCompatActivity implements DrawerLayout.Draw
                 , R.string.navigation_drawer_close);
 
         mDrawerToggle.syncState();
-        LogUtils.LOGD(this, "setup setupNavDrawer");
+        mNavigationView.setNavigationItemSelectedListener(this);
+        LOGD(this, "setup setupNavDrawer");
+    }
+
+    @Override
+    protected void onPostCreate(Bundle savedInstanceState) {
+        super.onPostCreate(savedInstanceState);
+        // Sync the toggle state after onRestoreInstanceState has occurred.
+        mDrawerToggle.syncState();
     }
 
 
@@ -81,5 +106,25 @@ public class MainActivity extends AppCompatActivity implements DrawerLayout.Draw
     @Override
     public void onDrawerStateChanged(int newState) {
         mDrawerToggle.onDrawerStateChanged(newState);
+    }
+
+    @Override
+    public boolean onNavigationItemSelected(MenuItem menuItem) {
+        @IdRes int id = menuItem.getItemId();
+        if(id == mCurrentMenuItem) {
+            mDrawerLayout.closeDrawers();
+            return false;
+        }
+        switch (id){
+            case R.id.standard_app_bar_menu_item:
+                mNavigator.goTo(StandardAppBarFragment.newInstance());
+                mDrawerLayout.closeDrawers();
+                break;
+            case R.id.tabs_menu_item:
+                Toast.makeText(this, "Not implemted yet",Toast.LENGTH_SHORT).show();
+                mDrawerLayout.closeDrawers();
+                break;
+        }
+        return false;
     }
 }

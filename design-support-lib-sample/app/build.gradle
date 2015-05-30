@@ -5,7 +5,7 @@ android {
     buildToolsVersion "22.0.1"
 
     defaultConfig {
-        applicationId "ch.swissonid.playground_io2015"
+        applicationId "ch.swissonid.design_samples"
         minSdkVersion 19
         targetSdkVersion 22
         versionCode 1
