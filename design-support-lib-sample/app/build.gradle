@@ -5,7 +5,7 @@ android {
     buildToolsVersion "22.0.1"
 
     defaultConfig {
-        applicationId "ch.swissonid.playground_io2015"
+        applicationId "ch.swissonid.design_samples"
         minSdkVersion 19
         targetSdkVersion 22
         versionCode 1
@@ -24,4 +24,7 @@ dependencies {
     compile 'com.android.support:appcompat-v7:22.2.0'
     compile 'com.android.support:design:22.2.0'
     compile 'com.android.support:recyclerview-v7:22.2.0'
+
+    //ButterKnife
+    compile 'com.jakewharton:butterknife:6.1.0'
 }
