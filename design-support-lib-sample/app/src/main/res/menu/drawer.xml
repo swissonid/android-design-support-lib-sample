@@ -5,10 +5,23 @@
             android:id="@+id/standard_app_bar_menu_item"
             android:checked="true"
             android:icon="@drawable/ic_android"
-            android:title="@string/standard_app_bar_menu_title"/>
+            android:title="@string/standard_app_bar_menu_title"
+            />
         <item
             android:id="@+id/tabs_menu_item"
             android:icon="@drawable/ic_android"
-            android:title="@string/tabs_menu_title"/>
+            android:title="@string/tabs_menu_title"
+            />
+        <item
+            android:id="@+id/parallax_menu_item"
+            android:icon="@drawable/ic_android"
+            android:title="@string/parallax_menu_title"
+            />
+
+        <item
+            android:id="@+id/pinned_app_bar_menu_item"
+            android:icon="@drawable/ic_android"
+            android:title="@string/pinned_menu_title"
+            />
     </group>
 </menu>

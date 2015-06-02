@@ -3,6 +3,7 @@ package ch.swissonid.design_lib_sample;
 import android.os.Bundle;
 import android.support.annotation.IdRes;
 import android.support.design.widget.NavigationView;
+import android.support.v4.app.Fragment;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
@@ -12,6 +13,8 @@ import android.view.View;
 
 import butterknife.ButterKnife;
 import butterknife.InjectView;
+import ch.swissonid.design_lib_sample.fragments.ParallaxFragment;
+import ch.swissonid.design_lib_sample.fragments.PinnedAppBarkFragment;
 import ch.swissonid.design_lib_sample.fragments.StandardAppBarFragment;
 import ch.swissonid.design_lib_sample.fragments.TabFragment;
 import ch.swissonid.design_lib_sample.util.LogUtils;
@@ -47,6 +50,11 @@ public class DrawerActivity extends AppCompatActivity implements DrawerLayout.Dr
 
     private void initNavigator() {
         mNavigator = new Navigator(getSupportFragmentManager(), R.id.container);
+    }
+
+    private void setNewRootFragment(Fragment fragment){
+        mNavigator.setRootFragment(fragment);
+        mDrawerLayout.closeDrawers();
     }
 
     private void setupToolbar() {
@@ -116,12 +124,18 @@ public class DrawerActivity extends AppCompatActivity implements DrawerLayout.Dr
         }
         switch (id){
             case R.id.standard_app_bar_menu_item:
-                mNavigator.setRootFragment(StandardAppBarFragment.newInstance());
-                mDrawerLayout.closeDrawers();
+                setNewRootFragment(StandardAppBarFragment.newInstance());
                 break;
             case R.id.tabs_menu_item:
-                mNavigator.setRootFragment(TabFragment.newInstance());
-                mDrawerLayout.closeDrawers();
+                setNewRootFragment(TabFragment.newInstance());
+                break;
+
+            case R.id.parallax_menu_item:
+                setNewRootFragment(ParallaxFragment.newInstance());
+                break;
+
+            case R.id.pinned_app_bar_menu_item:
+                setNewRootFragment(PinnedAppBarkFragment.newInstance());
                 break;
         }
         mCurrentMenuItem = id;
