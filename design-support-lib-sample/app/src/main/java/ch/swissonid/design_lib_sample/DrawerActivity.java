@@ -2,7 +2,6 @@ package ch.swissonid.design_lib_sample;
 
 import android.os.Bundle;
 import android.support.annotation.IdRes;
-import android.support.annotation.MenuRes;
 import android.support.design.widget.NavigationView;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
@@ -10,17 +9,17 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.Toast;
 
 import butterknife.ButterKnife;
 import butterknife.InjectView;
 import ch.swissonid.design_lib_sample.fragments.StandardAppBarFragment;
+import ch.swissonid.design_lib_sample.fragments.TabFragment;
 import ch.swissonid.design_lib_sample.util.LogUtils;
 import ch.swissonid.design_lib_sample.util.Navigator;
 
 import static ch.swissonid.design_lib_sample.util.LogUtils.LOGD;
 
-public class MainActivity extends AppCompatActivity implements DrawerLayout.DrawerListener
+public class DrawerActivity extends AppCompatActivity implements DrawerLayout.DrawerListener
         , NavigationView.OnNavigationItemSelectedListener{
 
     @InjectView(R.id.drawer_layout)
@@ -37,17 +36,17 @@ public class MainActivity extends AppCompatActivity implements DrawerLayout.Draw
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_drawer);
         ButterKnife.inject(this);
         setupToolbar();
         setupNavDrawer();
         initNavigator();
         mCurrentMenuItem = R.id.standard_app_bar_menu_item;
-        mNavigator.setStartFragment(StandardAppBarFragment.newInstance());
+        mNavigator.setRootFragment(StandardAppBarFragment.newInstance());
     }
 
     private void initNavigator() {
-        mNavigator = new Navigator(getSupportFragmentManager());
+        mNavigator = new Navigator(getSupportFragmentManager(), R.id.container);
     }
 
     private void setupToolbar() {
@@ -117,14 +116,16 @@ public class MainActivity extends AppCompatActivity implements DrawerLayout.Draw
         }
         switch (id){
             case R.id.standard_app_bar_menu_item:
-                mNavigator.goTo(StandardAppBarFragment.newInstance());
+                mNavigator.setRootFragment(StandardAppBarFragment.newInstance());
                 mDrawerLayout.closeDrawers();
                 break;
             case R.id.tabs_menu_item:
-                Toast.makeText(this, "Not implemted yet",Toast.LENGTH_SHORT).show();
+                mNavigator.setRootFragment(TabFragment.newInstance());
                 mDrawerLayout.closeDrawers();
                 break;
         }
+        mCurrentMenuItem = id;
+        menuItem.setChecked(true);
         return false;
     }
 }
