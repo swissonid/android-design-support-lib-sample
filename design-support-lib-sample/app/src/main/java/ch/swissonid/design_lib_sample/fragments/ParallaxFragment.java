@@ -1,11 +1,7 @@
 package ch.swissonid.design_lib_sample.fragments;
 
 
-import android.os.Bundle;
 import android.support.v4.app.Fragment;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
 
 import ch.swissonid.design_lib_sample.R;
 
@@ -14,7 +10,8 @@ import ch.swissonid.design_lib_sample.R;
  * Use the {@link ParallaxFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class ParallaxFragment extends Fragment {
+public class ParallaxFragment extends BaseFragment {
+
 
     /**
      * Use this factory method to create a new instance of
@@ -32,11 +29,22 @@ public class ParallaxFragment extends Fragment {
 
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_parallax, container, false);
+    protected int getToolbarId() {
+        return R.id.toolbar_parallax;
     }
 
+    @Override
+    protected int getTitle() {
+        return R.string.parallax_menu_title;
+    }
 
+    @Override
+    public boolean hasCustomToolbar() {
+        return true;
+    }
+
+    @Override
+    protected int getLayout() {
+        return R.layout.fragment_parallax;
+    }
 }

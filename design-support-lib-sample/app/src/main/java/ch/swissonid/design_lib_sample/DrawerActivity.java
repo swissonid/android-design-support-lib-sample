@@ -3,16 +3,18 @@ package ch.swissonid.design_lib_sample;
 import android.os.Bundle;
 import android.support.annotation.IdRes;
 import android.support.design.widget.NavigationView;
-import android.support.v4.app.Fragment;
 import android.support.v4.widget.DrawerLayout;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.view.Gravity;
 import android.view.MenuItem;
 import android.view.View;
 
 import butterknife.ButterKnife;
 import butterknife.InjectView;
+import ch.swissonid.design_lib_sample.fragments.BaseFragment;
 import ch.swissonid.design_lib_sample.fragments.ParallaxFragment;
 import ch.swissonid.design_lib_sample.fragments.PinnedAppBarkFragment;
 import ch.swissonid.design_lib_sample.fragments.StandardAppBarFragment;
@@ -52,7 +54,12 @@ public class DrawerActivity extends AppCompatActivity implements DrawerLayout.Dr
         mNavigator = new Navigator(getSupportFragmentManager(), R.id.container);
     }
 
-    private void setNewRootFragment(Fragment fragment){
+    private void setNewRootFragment(BaseFragment fragment){
+        if(fragment.hasCustomToolbar()){
+            hideActionBar();
+        }else {
+            showActionBar();
+        }
         mNavigator.setRootFragment(fragment);
         mDrawerLayout.closeDrawers();
     }
@@ -64,9 +71,22 @@ public class DrawerActivity extends AppCompatActivity implements DrawerLayout.Dr
             return;
         }
         setSupportActionBar(mToolbar);
-        if(getSupportActionBar() == null) return;
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        getSupportActionBar().setHomeButtonEnabled(true);
+        ActionBar actionBar = getSupportActionBar();
+        if(actionBar == null) return;
+        actionBar.setDisplayHomeAsUpEnabled(true);
+        actionBar.setHomeButtonEnabled(true);
+    }
+
+    private void hideActionBar(){
+        ActionBar actionBar = getSupportActionBar();
+        if(actionBar == null) return;
+        actionBar.hide();
+    }
+
+    private void showActionBar() {
+        ActionBar actionBar = getSupportActionBar();
+        if(actionBar == null) return;
+        actionBar.show();
     }
 
     private void setupNavDrawer() {
@@ -103,6 +123,10 @@ public class DrawerActivity extends AppCompatActivity implements DrawerLayout.Dr
     @Override
     public void onDrawerOpened(View drawerView) {
         mDrawerToggle.onDrawerOpened(drawerView);
+    }
+
+    public void openDrawer(){
+        mDrawerLayout.openDrawer(Gravity.LEFT);
     }
 
     @Override
