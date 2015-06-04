@@ -1,9 +1,25 @@
 package ch.swissonid.design_lib_sample.fragments;
 
 
+import android.annotation.TargetApi;
+import android.graphics.Color;
+import android.graphics.drawable.Drawable;
+import android.os.Build;
+import android.os.Bundle;
+import android.support.annotation.NonNull;
+import android.support.design.widget.CollapsingToolbarLayout;
 import android.support.v4.app.Fragment;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
+import android.view.View;
+import android.view.Window;
+import android.view.WindowManager;
 
+import butterknife.ButterKnife;
+import butterknife.InjectView;
+import ch.swissonid.design_lib_sample.BuildConfig;
 import ch.swissonid.design_lib_sample.R;
+import ch.swissonid.design_lib_sample.adapters.RVArrayAdapter;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -12,7 +28,10 @@ import ch.swissonid.design_lib_sample.R;
  */
 public class ParallaxFragment extends BaseFragment {
 
+    @InjectView(R.id.collapsing_toolbar)
+    CollapsingToolbarLayout mCollapsingToolbar;
 
+    private static final int AMOUNT_OF_DATA = 50;
     /**
      * Use this factory method to create a new instance of
      * this fragment using the provided parameters.
@@ -25,6 +44,33 @@ public class ParallaxFragment extends BaseFragment {
 
     public ParallaxFragment() {
         // Required empty public constructor
+    }
+
+    private void setList() {
+        RecyclerView recyclerView = ButterKnife.findById(getActivity(), R.id.simpleList);
+
+        RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(getActivity());
+        recyclerView.setLayoutManager(layoutManager);
+
+        RVArrayAdapter arrayAdapter = new RVArrayAdapter(getData());
+        recyclerView.setAdapter(arrayAdapter);
+    }
+
+    @Override
+    public void onActivityCreated(Bundle savedInstanceState) {
+        super.onActivityCreated(savedInstanceState);
+        setList();
+        mCollapsingToolbar.setTitle(getString(getTitle()));
+
+    }
+
+    @NonNull
+    private String[] getData() {
+        String[] data = new String[AMOUNT_OF_DATA];
+        for(int i=0;i<AMOUNT_OF_DATA;++i){
+            data[i]=(getString(R.string.sample_data,(i+1)));
+        }
+        return data;
     }
 
 
