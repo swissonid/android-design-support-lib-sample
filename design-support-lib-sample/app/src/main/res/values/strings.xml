@@ -9,4 +9,5 @@
     <string name="navigation_drawer_close" translatable="false"/>
     <string name="sample_email">sample.user@email.com</string>
     <string name="not_implemented_yet">Not implemented yet</string>
+    <string name="contact_desc">contact photo</string>
 </resources>

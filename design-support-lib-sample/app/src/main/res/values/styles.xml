@@ -11,4 +11,8 @@
         <item name="android:layout_centerInParent">true</item>
         <item name="android:textAllCaps">true</item>
     </style>
+    
+    <style name="ExpandedTitleTextAppearance">
+        <item name="android:layout_marginStart">16dp</item>
+    </style>
 </resources>

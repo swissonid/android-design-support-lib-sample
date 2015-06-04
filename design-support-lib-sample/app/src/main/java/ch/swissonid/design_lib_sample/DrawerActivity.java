@@ -1,5 +1,6 @@
 package ch.swissonid.design_lib_sample;
 
+import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.IdRes;
 import android.support.design.widget.NavigationView;
@@ -11,6 +12,8 @@ import android.support.v7.widget.Toolbar;
 import android.view.Gravity;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.Window;
+import android.view.WindowManager;
 
 import butterknife.ButterKnife;
 import butterknife.InjectView;
@@ -48,6 +51,7 @@ public class DrawerActivity extends AppCompatActivity implements DrawerLayout.Dr
         initNavigator();
         mCurrentMenuItem = R.id.standard_app_bar_menu_item;
         mNavigator.setRootFragment(StandardAppBarFragment.newInstance());
+        //setTransparentStatusBar();
     }
 
     private void initNavigator() {
@@ -165,5 +169,15 @@ public class DrawerActivity extends AppCompatActivity implements DrawerLayout.Dr
         mCurrentMenuItem = id;
         menuItem.setChecked(true);
         return false;
+    }
+
+    public void setTransparentStatusBar(){
+        if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP){
+            Window window = getWindow();
+            window.getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_LAYOUT_STABLE | View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN);
+            window.setStatusBarColor(getResources().getColor(android.R.color.transparent));
+            window.clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
+            window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
+        }
     }
 }
