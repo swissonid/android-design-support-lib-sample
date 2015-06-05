@@ -1,9 +1,19 @@
 <resources>
 
     <!-- Base application theme. -->
-    <style name="AppTheme" parent="Theme.AppCompat.NoActionBar">
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+    </style>
+
+    <style name="Widget.MyApp.ActionBar" parent="Widget.AppCompat.ActionBar">
+        <item name="android:background">?colorPrimary</item>
+        <item name="theme">@style/ThemeOverlay.MyApp.ActionBar</item>
+        <item name="popupTheme">@style/ThemeOverlay.AppCompat.Light</item>
+    </style>
+
+    <style name="ThemeOverlay.MyApp.ActionBar" parent="ThemeOverlay.AppCompat.ActionBar">
+        <item name="android:textColorPrimary">@android:color/white</item>
     </style>
 
     <style name="NotImplementedYet">
@@ -11,8 +21,17 @@
         <item name="android:layout_centerInParent">true</item>
         <item name="android:textAllCaps">true</item>
     </style>
-    
-    <style name="ExpandedTitleTextAppearance">
-        <item name="android:layout_marginStart">16dp</item>
+    <style name="Title" parent="TextAppearance.AppCompat.Title">
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+    <style name="Title.Expanded" parent="Title">
+        <item name="android:textSize">32sp</item>
+    </style>
+    <style name="Title.collapsed" parent="Title">
+        <item name="android:textSize">@dimen/abc_text_size_title_material_toolbar</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+    <style name="ViewText">
+        <item name="android:textColor">@android:color/white</item>
     </style>
 </resources>

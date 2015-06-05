@@ -5,22 +5,58 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     >
-    <android.support.v7.widget.RecyclerView
-        android:id="@+id/simpleList"
+
+    <android.support.v4.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         app:layout_behavior="@string/appbar_scrolling_view_behavior"
-        />
+        >
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:minHeight="800dp"
+            android:layout_height="wrap_content"
+            android:paddingTop="24dp"
+            >
+            <ch.swissonid.design_lib_sample.widget.ListItem
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:text="@string/sample_data"
+                app:leftIcon="@drawable/ic_location"
+                />
+            <ch.swissonid.design_lib_sample.widget.ListItem
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:text="@string/sample_data"
+                app:leftIcon="@drawable/ic_location"
+                />
+            <ch.swissonid.design_lib_sample.widget.ListItem
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:text="@string/sample_data"
+                app:leftIcon="@drawable/ic_location"
+                />
+            <ch.swissonid.design_lib_sample.widget.ListItem
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:text="@string/sample_data"
+                app:leftIcon="@drawable/ic_location"
+                />
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
 
     <android.support.design.widget.AppBarLayout
         android:layout_width="match_parent"
-        android:layout_height="192dp"
+        android:layout_height="240dp"
         >
         <android.support.design.widget.CollapsingToolbarLayout
             android:id="@+id/collapsing_toolbar"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             app:contentScrim="?colorPrimary"
+            app:expandedTitleMarginStart="48dp"
+            app:expandedTitleTextAppearance="@style/Title.Expanded"
+            app:collapsedTitleTextAppearance="@style/Title.collapsed"
             app:layout_scrollFlags="scroll|exitUntilCollapsed"
             >
             <ImageView
@@ -29,12 +65,20 @@
                 android:scaleType="centerCrop"
                 android:src="@drawable/contact"
                 android:contentDescription="@string/contact_desc"
+                app:layout_collapseMode="parallax"
+                />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="240dp"
+                android:background="@drawable/gradient"
+
                 />
             <android.support.v7.widget.Toolbar
                 android:id="@+id/toolbar_parallax"
                 android:layout_height="?attr/actionBarSize"
                 android:layout_width="match_parent"
-                app:layout_collapseMode="pin">
+                app:layout_collapseMode="pin"
+                >
             </android.support.v7.widget.Toolbar>
         </android.support.design.widget.CollapsingToolbarLayout>
     </android.support.design.widget.AppBarLayout>
