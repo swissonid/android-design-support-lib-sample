@@ -2,4 +2,5 @@
 <resources>
     <color name="colorPrimary">@android:color/holo_green_light</color>
     <color name="colorPrimaryDark">@android:color/holo_green_dark</color>
+    <color name="divider">#644d4d4d</color>
 </resources>

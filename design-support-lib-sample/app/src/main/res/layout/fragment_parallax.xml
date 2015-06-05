@@ -21,26 +21,48 @@
             <ch.swissonid.design_lib_sample.widget.ListItem
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                app:text="@string/sample_data"
+                app:text="071 999 12 34"
+                app:leftIcon="@drawable/ic_phone"
+                />
+            <ch.swissonid.design_lib_sample.widget.ListItem
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:text="044 777 12 34"
+                />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/divider"
+                android:layout_margin="@dimen/divider_padding"
+                />
+            <ch.swissonid.design_lib_sample.widget.ListItem
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:text="something@somewhere.com"
+                app:leftIcon="@drawable/ic_email"
+                />
+            <ch.swissonid.design_lib_sample.widget.ListItem
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:text="else@elsewhere.com"
+                />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/divider"
+                android:layout_margin="@dimen/divider_padding"
+                />
+
+            <ch.swissonid.design_lib_sample.widget.ListItem
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:text="Zuerich..."
                 app:leftIcon="@drawable/ic_location"
                 />
             <ch.swissonid.design_lib_sample.widget.ListItem
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                app:text="@string/sample_data"
-                app:leftIcon="@drawable/ic_location"
-                />
-            <ch.swissonid.design_lib_sample.widget.ListItem
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                app:text="@string/sample_data"
-                app:leftIcon="@drawable/ic_location"
-                />
-            <ch.swissonid.design_lib_sample.widget.ListItem
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                app:text="@string/sample_data"
-                app:leftIcon="@drawable/ic_location"
+                app:text="New York..."
                 />
         </LinearLayout>
     </android.support.v4.widget.NestedScrollView>
