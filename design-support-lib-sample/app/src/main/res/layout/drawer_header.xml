@@ -1,10 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:background="@drawable/default_bg"
     android:layout_height="192dp">
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:layout_margin="@dimen/activity_horizontal_margin"
+        android:id="@+id/profile_image"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:src="@drawable/contact"
+        app:border_width="1dp"
+        app:border_color="@android:color/white"/>
     <View
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -14,8 +23,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:layout_alignParentEnd="true"
-        android:layout_margin="16dp"
+        android:layout_alignParentStart="true"
+        android:layout_margin="@dimen/activity_horizontal_margin"
         android:text="@string/sample_email"
         style="@style/ViewText"
         />

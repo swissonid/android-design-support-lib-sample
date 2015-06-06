@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">@android:color/holo_green_light</color>
-    <color name="colorPrimaryDark">@android:color/holo_green_dark</color>
+    <color name="colorPrimary">#E74C3C</color>
+    <color name="colorPrimaryDark">#B83c30</color>
     <color name="divider">#644d4d4d</color>
 </resources>
