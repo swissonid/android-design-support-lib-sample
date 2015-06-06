@@ -1,5 +1,5 @@
 # android-design-support-lib-sample
-This Project is used to for me to get know with the new [**desing lib  from Google**](http://goo.gl/KZBhH2)Google Inc**. and to make the first pitfalls ;D.
+This Project is used to for me to get know with the new [**desing lib  from Google**](http://goo.gl/KZBhH2). and to make the first pitfalls ;D.
 
 Furhter I will try to make an example for each of the scrolling technical descriped in the [Material Specs](http://goo.gl/oH1lJX)
 
