@@ -3,12 +3,13 @@
     <string name="sample_data">"Some data %1$d"</string>
     <string name="standard_app_bar_menu_title">Standard app bar</string>
     <string name="tabs_menu_title">Tabs</string>
-    <string name="parallax_menu_title">Parallax app bar</string>
-    <string name="pinned_menu_title">Flexible space pinned app bar</string>
+    <string name="flexible_space_with_image_menu_title">Flexible space with image</string>
+    <string name="flexible_space_menu_title">Flexible space app bar</string>
     <string name="navigation_drawer_open" translatable="false"/>
     <string name="navigation_drawer_close" translatable="false"/>
     <string name="sample_email">sample.user@email.com</string>
     <string name="not_implemented_yet">Not implemented yet</string>
     <string name="contact_desc">contact photo</string>
     <string name="desc_list_item_left_icon">desc_list_item_icon</string>
+    <string name="some_folder">Some folder</string>
 </resources>

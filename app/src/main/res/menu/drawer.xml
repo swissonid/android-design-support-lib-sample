@@ -15,13 +15,13 @@
         <item
             android:id="@+id/parallax_menu_item"
             android:icon="@drawable/ic_android"
-            android:title="@string/parallax_menu_title"
+            android:title="@string/flexible_space_with_image_menu_title"
             />
 
         <item
             android:id="@+id/pinned_app_bar_menu_item"
             android:icon="@drawable/ic_android"
-            android:title="@string/pinned_menu_title"
+            android:title="@string/flexible_space_menu_title"
             />
     </group>
 </menu>

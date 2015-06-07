@@ -11,6 +11,7 @@
         android:layout_height="match_parent"
         app:layout_behavior="@string/appbar_scrolling_view_behavior"
         >
+        <!-- TODO calculate the minHeight in the fragment -->
         <LinearLayout
             android:orientation="vertical"
             android:layout_width="match_parent"
@@ -96,7 +97,7 @@
 
                 />
             <android.support.v7.widget.Toolbar
-                android:id="@+id/toolbar_parallax"
+                android:id="@+id/toolbar_flexible_space_with_image"
                 android:layout_height="?attr/actionBarSize"
                 android:layout_width="match_parent"
                 app:layout_collapseMode="pin"

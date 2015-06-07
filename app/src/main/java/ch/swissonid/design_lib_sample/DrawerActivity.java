@@ -18,8 +18,8 @@ import android.view.WindowManager;
 import butterknife.ButterKnife;
 import butterknife.InjectView;
 import ch.swissonid.design_lib_sample.fragments.BaseFragment;
-import ch.swissonid.design_lib_sample.fragments.ParallaxFragment;
-import ch.swissonid.design_lib_sample.fragments.PinnedAppBarkFragment;
+import ch.swissonid.design_lib_sample.fragments.FlexibleSpaceWithImageFragment;
+import ch.swissonid.design_lib_sample.fragments.FlexibleSpaceFragment;
 import ch.swissonid.design_lib_sample.fragments.StandardAppBarFragment;
 import ch.swissonid.design_lib_sample.fragments.TabFragment;
 import ch.swissonid.design_lib_sample.util.LogUtils;
@@ -159,11 +159,11 @@ public class DrawerActivity extends AppCompatActivity implements DrawerLayout.Dr
                 break;
 
             case R.id.parallax_menu_item:
-                setNewRootFragment(ParallaxFragment.newInstance());
+                setNewRootFragment(FlexibleSpaceWithImageFragment.newInstance());
                 break;
 
             case R.id.pinned_app_bar_menu_item:
-                setNewRootFragment(PinnedAppBarkFragment.newInstance());
+                setNewRootFragment(FlexibleSpaceFragment.newInstance());
                 break;
         }
         mCurrentMenuItem = id;

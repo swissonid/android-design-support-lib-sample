@@ -10,26 +10,21 @@ import ch.swissonid.design_lib_sample.R;
 
 /**
  * A simple {@link Fragment} subclass.
- * Use the {@link ParallaxFragment#newInstance} factory method to
+ * Use the {@link FlexibleSpaceFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class ParallaxFragment extends BaseFragment {
+public class FlexibleSpaceFragment extends BaseFragment {
 
     @InjectView(R.id.collapsing_toolbar)
     CollapsingToolbarLayout mCollapsingToolbar;
-
     /**
      * Use this factory method to create a new instance of
      * this fragment using the provided parameters.
      *
-     * @return A new instance of fragment ParallaxFragment.
+     * @return A new instance of fragment PinnedAppBarkFragment.
      */
-    public static ParallaxFragment newInstance() {
-        return new ParallaxFragment();
-    }
-
-    public ParallaxFragment() {
-        // Required empty public constructor
+    public static FlexibleSpaceFragment newInstance() {
+        return new FlexibleSpaceFragment();
     }
 
     @Override
@@ -38,14 +33,18 @@ public class ParallaxFragment extends BaseFragment {
         mCollapsingToolbar.setTitle(getString(getTitle()));
     }
 
-    @Override
-    protected int getToolbarId() {
-        return R.id.toolbar_parallax;
+    public FlexibleSpaceFragment() {
+        // Required empty public constructor
     }
 
     @Override
     protected int getTitle() {
-        return R.string.parallax_menu_title;
+        return R.string.flexible_space_menu_title;
+    }
+
+    @Override
+    protected int getToolbarId() {
+        return R.id.toolbar_flexible_space;
     }
 
     @Override
@@ -55,6 +54,8 @@ public class ParallaxFragment extends BaseFragment {
 
     @Override
     protected int getLayout() {
-        return R.layout.fragment_parallax;
+        return R.layout.fragment_flexible_space;
     }
+
+
 }
