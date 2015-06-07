@@ -2,7 +2,6 @@
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:orientation="vertical"
     android:layout_width="match_parent"
     android:background="@drawable/default_bg"
     android:layout_height="192dp">
@@ -17,15 +16,25 @@
     <View
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@drawable/gradient"
-        />
-    <TextView
-        android:layout_width="wrap_content"
+        android:background="@drawable/gradient" />
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:orientation="vertical"
         android:layout_alignParentBottom="true"
         android:layout_alignParentStart="true"
-        android:layout_margin="@dimen/activity_horizontal_margin"
-        android:text="@string/sample_email"
-        style="@style/ViewText"
-        />
+        android:layout_margin="@dimen/activity_horizontal_margin">
+        <TextView
+            android:id="@+id/drawer_user_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/sample_name"
+            style="@style/DrawerNameText" />
+        <TextView
+            android:id="@+id/drawer_user_email"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/sample_email"
+            style="@style/ViewText" />
+    </LinearLayout>
 </RelativeLayout>

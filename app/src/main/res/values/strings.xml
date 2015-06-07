@@ -12,4 +12,5 @@
     <string name="contact_desc">contact photo</string>
     <string name="desc_list_item_left_icon">desc_list_item_icon</string>
     <string name="some_folder">Some folder</string>
+    <string name="sample_name">User Name</string>
 </resources>
