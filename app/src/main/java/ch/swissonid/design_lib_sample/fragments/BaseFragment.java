@@ -56,7 +56,9 @@ public abstract class BaseFragment extends Fragment {
         return false;
     }
 
-    protected abstract @StringRes int getTitle();
+    protected @StringRes int getTitle(){
+        return R.string.not_title_set;
+    }
 
     protected abstract  @LayoutRes int getLayout();
 }

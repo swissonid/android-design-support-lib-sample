@@ -11,6 +11,12 @@
     <string name="not_implemented_yet">Not implemented yet</string>
     <string name="contact_desc">contact photo</string>
     <string name="desc_list_item_left_icon">desc_list_item_icon</string>
+    <string name="image_desc">image_desc</string>
     <string name="some_folder">Some folder</string>
     <string name="sample_name">User Name</string>
+    <string name="pop_title">Pop</string>
+    <string name="indie_title">Indie</string>
+    <string name="rock_title">Rock</string>
+    <string name="r8b_title"><![CDATA[R&B]]></string>
+    <string name="not_title_set">No title set</string>
 </resources>
