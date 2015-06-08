@@ -1,4 +1,4 @@
-package ch.swissonid.design_lib_sample.fragments.tab;
+package ch.swissonid.design_lib_sample.fragments.tabs;
 
 
 import android.os.Bundle;

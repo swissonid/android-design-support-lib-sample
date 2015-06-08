@@ -6,7 +6,7 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 
 import ch.swissonid.design_lib_sample.R;
-import ch.swissonid.design_lib_sample.fragments.tab.TabFragment;
+import ch.swissonid.design_lib_sample.fragments.tabs.TabFragment;
 
 public class PagerAdapter extends FragmentPagerAdapter {
 

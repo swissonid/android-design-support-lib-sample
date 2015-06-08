@@ -3,9 +3,7 @@ package ch.swissonid.design_lib_sample;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.IdRes;
-import android.support.annotation.NonNull;
 import android.support.design.widget.NavigationView;
-import android.support.v4.app.FragmentManager;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.ActionBarDrawerToggle;
@@ -23,7 +21,7 @@ import ch.swissonid.design_lib_sample.fragments.BaseFragment;
 import ch.swissonid.design_lib_sample.fragments.FlexibleSpaceWithImageFragment;
 import ch.swissonid.design_lib_sample.fragments.FlexibleSpaceFragment;
 import ch.swissonid.design_lib_sample.fragments.StandardAppBarFragment;
-import ch.swissonid.design_lib_sample.fragments.tab.TabHolderFragment;
+import ch.swissonid.design_lib_sample.fragments.tabs.TabHolderFragment;
 import ch.swissonid.design_lib_sample.util.LogUtils;
 import ch.swissonid.design_lib_sample.util.Navigator;
 
