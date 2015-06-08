@@ -8,12 +8,15 @@ Furhter I will try to make an example for each of the scrolling technical descri
 * Standard app bar
 * Flexible space
 * Flexible space with Image
+* Tabs
 
 ## What's OPEN
 * Transparent Statusbar
-* Tabs
 * Flexible space with overlapping content
+* Tabs with a recylerview
+* Remove fix value 800dp with calculation on Runtime
+* FabButton
 
 ## How does it look like right now
 
-<img src="https://cloud.githubusercontent.com/assets/1490212/8019155/ff2f5e54-0c3f-11e5-9d4e-ff99186b996c.gif" alt="demo"/>
+<img src="https://cloud.githubusercontent.com/assets/1490212/8047692/d7249446-0e48-11e5-92a1-0cd1a794a99c.gif" alt="video2" style="max-width:100%;">
