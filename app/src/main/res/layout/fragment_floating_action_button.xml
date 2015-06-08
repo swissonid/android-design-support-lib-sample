@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_below="@+id/toolbar">
+
+    <ch.swissonid.design_lib_sample.widget.ScrollListView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/sample_list"
+        android:layout_marginTop="?attr/actionBarSize"/>
+
+    <android.support.design.widget.FloatingActionButton
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:id="@+id/floating_action_button"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="8dp"
+        android:scaleType="centerInside"
+        android:src="@drawable/ic_add_white"/>
+</RelativeLayout>
