@@ -6,12 +6,12 @@ Furhter I will try to make an example for each of the scrolling technical descri
 ## What's DONE
 * Navigation Drawer
 * Standard app bar
+* Flexible space
 * Flexible space with Image
 
 ## What's OPEN
 * Transparent Statusbar
 * Tabs
-* Flexible space
 * Flexible space with overlapping content
 
 ## How does it look like right now
