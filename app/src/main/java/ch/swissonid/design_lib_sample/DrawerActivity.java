@@ -55,6 +55,7 @@ public class DrawerActivity extends AppCompatActivity implements DrawerLayout.Dr
     }
 
     private void initNavigator() {
+        if(mNavigator != null) return;
         mNavigator = new Navigator(getSupportFragmentManager(), R.id.container);
     }
 
@@ -99,7 +100,7 @@ public class DrawerActivity extends AppCompatActivity implements DrawerLayout.Dr
             return;
         }
         mDrawerLayout.setDrawerListener(this);
-
+        //TODO look at documantation => homepage do I really need like that?
         mDrawerToggle = new ActionBarDrawerToggle(this
                 , mDrawerLayout
                 , mToolbar
