@@ -29,4 +29,5 @@ dependencies {
 
     //ButterKnife
     compile 'com.jakewharton:butterknife:6.1.0'
+    compile 'com.squareup.picasso:picasso:2.5.2'
 }

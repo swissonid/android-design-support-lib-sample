@@ -53,6 +53,7 @@ public class DrawerActivity extends AppCompatActivity implements DrawerLayout.Dr
         initNavigator();
         mCurrentMenuItem = R.id.standard_app_bar_menu_item;
         setNewRootFragment(StandardAppBarFragment.newInstance());
+        //TODO make it work
         //setTransparentStatusBar();
     }
 
