@@ -13,7 +13,7 @@ public class RVArrayAdapter extends RecyclerView.Adapter<RVArrayAdapter.ViewHold
         mData = data;
     }
     @Override
-    public ViewHolder onCreateViewHolder(ViewGroup viewGroup, int i) {
+    public ViewHolder onCreateViewHolder(ViewGroup viewGroup, int position) {
         View view = LayoutInflater
                 .from(viewGroup.getContext())
                 .inflate(android.R.layout.simple_list_item_1,viewGroup,false);
