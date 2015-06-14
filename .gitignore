@@ -6,7 +6,8 @@
 .LSOverride
 
 # Icon must end with two \r
-Icon
+Icon
+
 
 # Thumbnails
 ._*
@@ -108,6 +109,7 @@ gen/
 
 # Gradle files
 .gradle/
+!gradle-wrapper.jar
 build/
 /*/build/
 

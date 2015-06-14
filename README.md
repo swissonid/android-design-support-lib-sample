@@ -9,12 +9,14 @@ Furhter I will try to make an example for each of the scrolling technical descri
 * Flexible space
 * Flexible space with Image
 * Tabs
+* Tabs with a recylerview
+
+## What's in PROGRESS
+* Remove fix value 800dp with calculation on Runtime
 
 ## What's OPEN
 * Transparent Statusbar
 * Flexible space with overlapping content
-* Tabs with a recylerview
-* Remove fix value 800dp with calculation on Runtime
 * FabButton
 
 ## How does it look like right now
