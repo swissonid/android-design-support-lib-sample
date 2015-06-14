@@ -10,9 +10,9 @@
         app:layout_behavior="@string/appbar_scrolling_view_behavior"
         >
         <LinearLayout
+            android:id="@+id/scrollingContent"
             android:orientation="vertical"
             android:layout_width="match_parent"
-            android:minHeight="800dp"
             android:layout_height="wrap_content"
             android:paddingTop="24dp"
             >

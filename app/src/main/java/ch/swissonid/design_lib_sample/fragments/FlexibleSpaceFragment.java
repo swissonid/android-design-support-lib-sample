@@ -4,9 +4,13 @@ package ch.swissonid.design_lib_sample.fragments;
 import android.os.Bundle;
 import android.support.design.widget.CollapsingToolbarLayout;
 import android.support.v4.app.Fragment;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
 
 import butterknife.InjectView;
 import ch.swissonid.design_lib_sample.R;
+import ch.swissonid.design_lib_sample.util.ScreenUtil;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -31,6 +35,18 @@ public class FlexibleSpaceFragment extends BaseFragment {
     public void onActivityCreated(Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
         mCollapsingToolbar.setTitle(getString(getTitle()));
+    }
+
+    @Override
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+        View view = super.onCreateView(inflater, container, savedInstanceState);
+        if(view == null) return null;
+        View scrollingView = view.findViewById(R.id.scrollingContent);
+        int screenHeight = ScreenUtil.getWindowHeightWithoutActionBar(view.getContext());
+        if(scrollingView.getHeight() < screenHeight){
+            scrollingView.getLayoutParams().height = screenHeight;
+        }
+        return  view;
     }
 
     public FlexibleSpaceFragment() {
