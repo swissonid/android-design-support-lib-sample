@@ -55,6 +55,6 @@ public class FlexibleSpaceWithImageFragment extends BaseFragment {
 
     @Override
     protected int getLayout() {
-        return R.layout.fragment_fexlible_space_with_image;
+        return R.layout.fragment_flexible_space_with_image;
     }
 }
