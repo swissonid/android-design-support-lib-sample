@@ -173,6 +173,12 @@ public class DrawerActivity extends AppCompatActivity implements DrawerLayout.Dr
         return false;
     }
 
+    @Override
+    public void finish() {
+        mNavigator = null;
+        super.finish();
+    }
+
     public void setTransparentStatusBar(){
         if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP){
             Window window = getWindow();
