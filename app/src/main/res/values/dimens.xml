@@ -13,4 +13,7 @@
     <!-- Music View -->
     <dimen name="image_width">180dp</dimen>
     <dimen name="image_height">240dp</dimen>
+
+    <!-- Fab -->
+    <dimen name="fab_margin">16dp</dimen>
 </resources>

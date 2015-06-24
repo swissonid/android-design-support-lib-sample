@@ -19,4 +19,5 @@
     <string name="rock_title">Rock</string>
     <string name="r8b_title"><![CDATA[R&B]]></string>
     <string name="not_title_set">No title set</string>
+    <string name="floating_action_button">Floating action button</string>
 </resources>
