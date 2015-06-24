@@ -20,6 +20,7 @@ import butterknife.InjectView;
 import ch.swissonid.design_lib_sample.fragments.BaseFragment;
 import ch.swissonid.design_lib_sample.fragments.FlexibleSpaceWithImageFragment;
 import ch.swissonid.design_lib_sample.fragments.FlexibleSpaceFragment;
+import ch.swissonid.design_lib_sample.fragments.FloatingActionButtonFragment;
 import ch.swissonid.design_lib_sample.fragments.StandardAppBarFragment;
 import ch.swissonid.design_lib_sample.fragments.tabs.TabHolderFragment;
 import ch.swissonid.design_lib_sample.util.LogUtils;
@@ -166,6 +167,10 @@ public class DrawerActivity extends AppCompatActivity implements DrawerLayout.Dr
 
             case R.id.pinned_app_bar_menu_item:
                 setNewRootFragment(FlexibleSpaceFragment.newInstance());
+                break;
+
+            case R.id.floating_action_button:
+                setNewRootFragment(FloatingActionButtonFragment.newInstance());
                 break;
         }
         mCurrentMenuItem = id;
