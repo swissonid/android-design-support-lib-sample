@@ -1,4 +1,4 @@
-[![Android Weekly](http://img.shields.io/badge/Android%20Weekly-%23129-2CB3E5.svg?style=flat)](http://androidweekly.net/issues/issue-158)
+[![Android Weekly](http://img.shields.io/badge/Android%20Weekly-%23129-2CB3E5.svg?style=flat)](http://androidweekly.net/issues/issue-157)
 
 # android-design-support-lib-sample
 This Project is used to for me to get know with the new [**desing lib  from Google**](http://goo.gl/KZBhH2). and to make the first pitfalls ;D.
