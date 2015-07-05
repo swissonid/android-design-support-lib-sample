@@ -4,4 +4,5 @@
     <color name="colorPrimaryDark">#B83c30</color>
     <color name="divider">#644d4d4d</color>
     <color name="titleTextColor">@android:color/white</color>
+    <color name="colorAccent">#23ff9a</color>
 </resources>
