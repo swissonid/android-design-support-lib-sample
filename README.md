@@ -19,7 +19,7 @@ Furhter I will try to make an example for each of the scrolling technical descri
 
 ## What's OPEN
 * Transparent Statusbar
-* Flexible space with overlapping content
+* Flexible space with overlapping contenty
 
 ## Knowing ISSUES
 * FabButton Animation with RecylerView
