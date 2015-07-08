@@ -6,6 +6,9 @@
     android:background="@drawable/default_bg"
     android:layout_height="@dimen/drawer_header_height">
     <de.hdodenhof.circleimageview.CircleImageView
+        android:layout_marginStart="@dimen/profile_img_margin_start"
+        android:layout_marginEnd="@dimen/profile_img_margin_end"
+        android:layout_marginTop="@dimen/profile_img_margin_top"
         android:id="@+id/profile_image"
         android:layout_width="64dp"
         android:layout_height="64dp"
