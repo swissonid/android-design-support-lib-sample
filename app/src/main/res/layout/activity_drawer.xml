@@ -10,6 +10,7 @@
     tools:context="ch.swissonid.design_lib_sample.DrawerActivity"
     >
 
+
     <FrameLayout
         android:id="@+id/container"
         android:layout_width="match_parent"
@@ -22,5 +23,6 @@
         android:layout_height="match_parent"
         android:layout_gravity="start"
         app:headerLayout="@layout/drawer_header"
+        android:fitsSystemWindows="true"
         app:menu="@menu/drawer"/>
 </android.support.v4.widget.DrawerLayout>
