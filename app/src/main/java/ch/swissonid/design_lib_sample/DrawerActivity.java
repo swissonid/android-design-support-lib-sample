@@ -10,8 +10,8 @@ import android.support.v7.widget.Toolbar;
 import android.view.Gravity;
 import android.view.MenuItem;
 
+import butterknife.Bind;
 import butterknife.ButterKnife;
-import butterknife.InjectView;
 import ch.swissonid.design_lib_sample.fragments.BaseFragment;
 import ch.swissonid.design_lib_sample.fragments.FlexibleSpaceFragment;
 import ch.swissonid.design_lib_sample.fragments.FlexibleSpaceWithImageFragment;
@@ -25,10 +25,10 @@ import static ch.swissonid.design_lib_sample.util.LogUtils.LOGD;
 
 public class DrawerActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener{
 
-    @InjectView(R.id.drawer_layout)
+    @Bind(R.id.drawer_layout)
     DrawerLayout mDrawerLayout;
 
-    @InjectView(R.id.navigation_view)
+    @Bind(R.id.navigation_view)
     NavigationView mNavigationView;
 
     private static Navigator mNavigator;
@@ -39,7 +39,7 @@ public class DrawerActivity extends AppCompatActivity implements NavigationView.
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_drawer);
-        ButterKnife.inject(this);
+        ButterKnife.bind(this);
         setupToolbar();
         setupNavDrawer();
         initNavigator();

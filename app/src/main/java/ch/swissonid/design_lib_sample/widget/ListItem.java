@@ -8,8 +8,8 @@ import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+import butterknife.Bind;
 import butterknife.ButterKnife;
-import butterknife.InjectView;
 import ch.swissonid.design_lib_sample.R;
 
 
@@ -18,10 +18,10 @@ public class ListItem extends RelativeLayout{
     private String mText;
     private Drawable mLeftIcon;
 
-    @InjectView(R.id.list_item_left_icon)
+    @Bind(R.id.list_item_left_icon)
     ImageView mLeftIconView;
 
-    @InjectView(R.id.list_item_text)
+    @Bind(R.id.list_item_text)
     TextView mTextView;
 
     public ListItem(Context context){
@@ -57,7 +57,7 @@ public class ListItem extends RelativeLayout{
     @Override
     protected void onFinishInflate() {
         super.onFinishInflate();
-        ButterKnife.inject(this);
+        ButterKnife.bind(this);
         setText(mText);
         setLeftIcon(mLeftIcon);
     }

@@ -9,12 +9,11 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import butterknife.InjectView;
+import butterknife.Bind;
 import ch.swissonid.design_lib_sample.R;
 import ch.swissonid.design_lib_sample.adapters.PagerAdapter;
 import ch.swissonid.design_lib_sample.fragments.BaseFragment;
 
-import static ch.swissonid.design_lib_sample.util.LogUtils.LOGD;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -22,10 +21,10 @@ import static ch.swissonid.design_lib_sample.util.LogUtils.LOGD;
  * create an instance of this fragment.
  */
 public class TabHolderFragment extends BaseFragment {
-    @InjectView(R.id.tab_layout)
+    @Bind(R.id.tab_layout)
     TabLayout mTabLayout;
 
-    @InjectView(R.id.view_pager)
+    @Bind(R.id.view_pager)
     ViewPager mViewPager;
 
     /**

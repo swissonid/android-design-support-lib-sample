@@ -6,7 +6,7 @@ android {
 
     defaultConfig {
         applicationId "ch.swissonid.design_samples"
-        minSdkVersion 9
+        minSdkVersion 19 // all other has bugs
         targetSdkVersion 22
         versionCode 1
         versionName "1.0"
@@ -28,6 +28,6 @@ dependencies {
     compile 'de.hdodenhof:circleimageview:1.3.0'
 
     //ButterKnife
-    compile 'com.jakewharton:butterknife:6.1.0'
+    compile 'com.jakewharton:butterknife:7.0.1'
     compile 'com.squareup.picasso:picasso:2.5.2'
 }
