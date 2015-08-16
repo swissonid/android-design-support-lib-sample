@@ -4,39 +4,28 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:background="@drawable/default_bg"
-
     android:layout_height="@dimen/drawer_header_height">
-
-    <FrameLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:padding="16dp"
-        android:layout_above="@+id/linearLayout">
-        <de.hdodenhof.circleimageview.CircleImageView
-            android:id="@+id/profile_image"
-            android:layout_width="64dp"
-            android:layout_height="64dp"
-            android:src="@drawable/contact"
-            app:border_width="1dp"
-            app:border_color="@android:color/white"/>
-    </FrameLayout>
-
-
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:layout_marginStart="@dimen/profile_img_margin_start"
+        android:layout_marginEnd="@dimen/profile_img_margin_end"
+        android:layout_marginTop="@dimen/profile_img_margin_top"
+        android:id="@+id/profile_image"
+        android:layout_width="@dimen/profile_dimen"
+        android:layout_height="@dimen/profile_dimen"
+        android:src="@drawable/contact"
+        app:border_width="1dp"
+        app:border_color="@android:color/white"/>
     <View
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@drawable/gradient"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentStart="true"
-        />
+        android:background="@drawable/gradient" />
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:layout_alignParentBottom="true"
         android:layout_alignParentStart="true"
-        android:layout_margin="@dimen/activity_horizontal_margin"
-        android:id="@+id/linearLayout">
+        android:layout_margin="@dimen/activity_horizontal_margin">
         <TextView
             android:id="@+id/drawer_user_name"
             android:layout_width="wrap_content"

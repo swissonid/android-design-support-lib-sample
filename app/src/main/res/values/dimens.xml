@@ -13,4 +13,13 @@
     <!-- Music View -->
     <dimen name="image_width">180dp</dimen>
     <dimen name="image_height">240dp</dimen>
+
+    <!-- Fab -->
+    <dimen name="fab_margin">16dp</dimen>
+
+    <!-- Drawer Header -->
+    <dimen name="drawer_header_height">192dp</dimen>
+
+    <!-- Profile Image -->
+    <dimen name="profile_dimen">64dp</dimen>
 </resources>

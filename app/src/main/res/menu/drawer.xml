@@ -23,5 +23,11 @@
             android:icon="@drawable/ic_android"
             android:title="@string/flexible_space_menu_title"
             />
+
+        <item
+            android:id="@+id/floating_action_button"
+            android:icon="@drawable/ic_android"
+            android:title="@string/floating_action_button"
+            />
     </group>
 </menu>

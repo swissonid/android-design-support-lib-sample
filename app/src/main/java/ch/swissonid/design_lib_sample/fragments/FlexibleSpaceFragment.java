@@ -8,7 +8,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import butterknife.InjectView;
+
+import butterknife.Bind;
 import ch.swissonid.design_lib_sample.R;
 import ch.swissonid.design_lib_sample.util.ScreenUtil;
 
@@ -19,7 +20,7 @@ import ch.swissonid.design_lib_sample.util.ScreenUtil;
  */
 public class FlexibleSpaceFragment extends BaseFragment {
 
-    @InjectView(R.id.collapsing_toolbar)
+    @Bind(R.id.collapsing_toolbar)
     CollapsingToolbarLayout mCollapsingToolbar;
     /**
      * Use this factory method to create a new instance of
