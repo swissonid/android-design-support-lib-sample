@@ -8,10 +8,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-
 import butterknife.Bind;
 import ch.swissonid.design_lib_sample.R;
-import ch.swissonid.design_lib_sample.util.ScreenUtil;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -42,11 +40,6 @@ public class FlexibleSpaceFragment extends BaseFragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = super.onCreateView(inflater, container, savedInstanceState);
         if(view == null) return null;
-        View scrollingView = view.findViewById(R.id.scrollingContent);
-        int screenHeight = ScreenUtil.getWindowHeightWithoutActionBar(view.getContext());
-        if(scrollingView.getHeight() < screenHeight){
-            scrollingView.getLayoutParams().height = screenHeight;
-        }
         return  view;
     }
 

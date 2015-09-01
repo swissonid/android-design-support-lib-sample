@@ -13,9 +13,10 @@ Furhter I will try to make an example for each of the scrolling technical descri
 * Tabs
 * Tabs with a RecylerView
 * FabButton
+* Remove fix value 800dp with calculation on Runtime
 
 ## What's in PROGRESS
-* Remove fix value 800dp with calculation on Runtime
+
 
 ## What's OPEN
 * Transparent Statusbar

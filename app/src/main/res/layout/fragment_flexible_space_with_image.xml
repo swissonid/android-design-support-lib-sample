@@ -35,11 +35,11 @@
                 android:contentDescription="@string/contact_desc"
                 app:layout_collapseMode="parallax"
                 />
-            <!--<View
+            <View
                 android:layout_width="match_parent"
                 android:fitsSystemWindows="true"
                 android:layout_height="240dp"
-                android:background="@drawable/gradient"-->
+                android:background="@drawable/gradient"
 
                 />
             <android.support.v7.widget.Toolbar
@@ -59,9 +59,9 @@
         app:layout_behavior="@string/appbar_scrolling_view_behavior"
         >
         <LinearLayout
+            android:id="@+id/scrollingContent"
             android:orientation="vertical"
             android:layout_width="match_parent"
-            android:minHeight="800dp"
             android:layout_height="wrap_content"
             android:paddingTop="24dp"
             >
