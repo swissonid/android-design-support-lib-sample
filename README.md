@@ -14,13 +14,13 @@ Furhter I will try to make an example for each of the scrolling technical descri
 * Tabs with a RecylerView
 * FabButton
 * Remove fix value 800dp with calculation on Runtime
+* Flexible space with overlapping content
 
 ## What's in PROGRESS
 
 
 ## What's OPEN
 * Transparent Statusbar
-* Flexible space with overlapping contenty
 
 ## Knowing ISSUES
 * FabButton Animation with RecylerView
