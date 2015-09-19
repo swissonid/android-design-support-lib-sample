@@ -16,6 +16,7 @@ import ch.swissonid.design_lib_sample.fragments.BaseFragment;
 import ch.swissonid.design_lib_sample.fragments.FlexibleSpaceFragment;
 import ch.swissonid.design_lib_sample.fragments.FlexibleSpaceWithImageFragment;
 import ch.swissonid.design_lib_sample.fragments.FloatingActionButtonFragment;
+import ch.swissonid.design_lib_sample.fragments.OverlappingContentFragment;
 import ch.swissonid.design_lib_sample.fragments.StandardAppBarFragment;
 import ch.swissonid.design_lib_sample.fragments.tabs.TabHolderFragment;
 import ch.swissonid.design_lib_sample.util.LogUtils;
@@ -124,6 +125,10 @@ public class DrawerActivity extends AppCompatActivity implements NavigationView.
 
             case R.id.floating_action_button:
                 setNewRootFragment(FloatingActionButtonFragment.newInstance());
+                break;
+
+            case R.id.overlapping_content_menu_item:
+                setNewRootFragment(OverlappingContentFragment.newInstance());
                 break;
         }
         mCurrentMenuItem = id;

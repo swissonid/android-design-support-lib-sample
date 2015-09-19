@@ -5,6 +5,7 @@
     <string name="tabs_menu_title">Tabs</string>
     <string name="flexible_space_with_image_menu_title">Flexible space with image</string>
     <string name="flexible_space_menu_title">Flexible space app bar</string>
+    <string name="overlapping_content_menu_title">Overlapping Content</string>
     <string name="navigation_drawer_open" translatable="false"/>
     <string name="navigation_drawer_close" translatable="false"/>
     <string name="sample_email">sample.user@email.com</string>

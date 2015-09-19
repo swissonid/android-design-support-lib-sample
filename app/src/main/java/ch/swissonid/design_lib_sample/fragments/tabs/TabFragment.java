@@ -11,6 +11,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import butterknife.ButterKnife;
+import ch.swissonid.design_lib_sample.Data;
 import ch.swissonid.design_lib_sample.R;
 import ch.swissonid.design_lib_sample.adapters.MusicCardRVArrayAdapter;
 import ch.swissonid.design_lib_sample.fragments.BaseFragment;
@@ -27,30 +28,6 @@ public class TabFragment extends BaseFragment {
     public static final int AMOUNT_OF_IMG_IN_VIEW = 5;
 
     private @DrawableRes int mStart;
-
-    private final @DrawableRes int[] ROOT_DATA = {
-            R.drawable.car,
-            R.drawable.cross,
-            R.drawable.doll,
-            R.drawable.desert,
-            R.drawable.fantastic,
-            R.drawable.girl,
-            R.drawable.glass,
-            R.drawable.jump,
-            R.drawable.mens,
-            R.drawable.plunge,
-            R.drawable.shadow,
-            R.drawable.wall,
-            R.drawable.baseball,
-            R.drawable.beach_with_hair,
-            R.drawable.cat_window,
-            R.drawable.crying,
-            R.drawable.food,
-            R.drawable.map,
-            R.drawable.mini_food,
-            R.drawable.mirror,
-            R.drawable.soup
-    };
 
 
     public static TabFragment newInstance(int start) {
@@ -86,22 +63,13 @@ public class TabFragment extends BaseFragment {
         RecyclerView.LayoutManager layoutManager = new GridLayoutManager(getActivity(), AMOUNT_OF_COLUMNS);
         recyclerView.setLayoutManager(layoutManager);
 
-        MusicCardRVArrayAdapter arrayAdapter = new MusicCardRVArrayAdapter(getData());
+        MusicCardRVArrayAdapter arrayAdapter = new MusicCardRVArrayAdapter(Data.getData(mStart, AMOUNT_OF_IMG_IN_VIEW));
         recyclerView.setAdapter(arrayAdapter);
     }
 
     @Override
     public void onActivityCreated(Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
-    }
-
-    protected @DrawableRes int[] getData(){
-        @DrawableRes int[] data = new int[AMOUNT_OF_IMG_IN_VIEW];
-        int j=0;
-        for(int i=mStart; i<(mStart+AMOUNT_OF_IMG_IN_VIEW);++i){
-            data[j++] = ROOT_DATA[i];
-        }
-        return data;
     }
 
     @Override

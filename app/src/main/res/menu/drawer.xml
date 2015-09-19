@@ -25,6 +25,12 @@
             />
 
         <item
+            android:id="@+id/overlapping_content_menu_item"
+            android:icon="@drawable/ic_android"
+            android:title="@string/overlapping_content_menu_title"
+            />
+
+        <item
             android:id="@+id/floating_action_button"
             android:icon="@drawable/ic_android"
             android:title="@string/floating_action_button"
