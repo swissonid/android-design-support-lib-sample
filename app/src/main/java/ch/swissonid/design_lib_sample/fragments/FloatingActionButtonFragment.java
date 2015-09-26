@@ -20,16 +20,6 @@ public class FloatingActionButtonFragment extends BaseFragment{
     @Bind(R.id.simpleList)
     RecyclerView mRecyclerView;
 
-    @Bind(R.id.appbar)
-    AppBarLayout mAppBarLayout;
-
-    @Bind(R.id.floating_action_button)
-    FloatingActionButton mFab;
-
-    @Bind(R.id.toolbar)
-    Toolbar mToolbar;
-
-
     public static FloatingActionButtonFragment newInstance() {
         return new FloatingActionButtonFragment();
     }
@@ -38,34 +28,12 @@ public class FloatingActionButtonFragment extends BaseFragment{
     public void onActivityCreated(Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
         setList();
-        moveFab();
     }
 
     @Override
     public void onViewCreated(View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-    }
-
-    private void moveFab(){
-        mAppBarLayout.addOnOffsetChangedListener(new AppBarLayout.OnOffsetChangedListener() {
-            @Override
-            public void onOffsetChanged(AppBarLayout appBarLayout, int i) {
-                float deltaY = mFab.getHeight()*1.5f;
-                if(i <0)animFab(deltaY);
-                else animFab(-deltaY);
-            }
-        });
-    }
-
-
-
-    private void animFab(final float deltaY){
-        ViewCompat.animate(mFab)
-                .translationYBy(deltaY)
-                .setInterpolator(AnimUtils.FAST_OUT_SLOW_IN_INTERPOLATOR)
-                .withLayer()
-                .start();
     }
 
     private void setList() {
